@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useSSL=false&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root11
+    tomcat:
+      max-wait: 600
+      max-active: 300
+      max-idle: 600
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+server:
+  tomcat:
+    uri-encoding: UTF-8
